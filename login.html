@@ -117,6 +117,12 @@
       margin-block-start: 42px;
     }
 
+    .secondary-button {
+      inline-size: 100%;
+      block-size: 60px;
+      padding-block: 18px;
+    }
+
     .forgot-password {
       margin-block-start: 30px;
     }
@@ -164,6 +170,13 @@
       color: var(--white);
     }
 
+    .secondary-button {
+      font-family: 'Quicksand', sans-serif;
+      font-size: var(--lg);
+      font-weight: 700;
+      color: var(--hospital-green)
+    }
+
     /*
     *
     * Visuals
@@ -183,6 +196,13 @@
     .form-input .primary-button {
       background-color: var(--hospital-green);
       cursor: pointer;
+    }
+
+    .secondary-button {
+      cursor: pointer;
+      border: 1px double var(--hospital-green);
+      background-color: var(--white);
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -204,7 +224,7 @@
           </article>
 
           <article class="form-input">
-            <input type="submit" value="Confirm" class="primary-button">
+            <input type="submit" value="Log in" class="primary-button">
           </article>
         </form>
 
