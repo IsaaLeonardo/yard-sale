@@ -70,12 +70,14 @@
     */
 
     .login-container {
+      box-sizing: border-box;
       max-inline-size: 340px;
       padding-inline: 18px;
+      padding-block: 20px;
     }
 
     .logo {
-      inline-size: 150px;
+      inline-size: 200px;
     }
 
     .form-container {
@@ -112,7 +114,11 @@
     .form-input .primary-button {
       block-size: 60px;
       padding-block: 18px;
-      margin-block-start: 35px;
+      margin-block-start: 42px;
+    }
+
+    .forgot-password {
+      margin-block-start: 30px;
     }
 
     @media (min-width: 768px) {
@@ -202,7 +208,7 @@
           </article>
         </form>
 
-        <a href="/">Forgot my password</a>
+        <a href="/" class="forgot-password">Forgot my password</a>
       </section>
 
       <button class="secondary-button">Sign up</button>
