@@ -40,10 +40,17 @@
       align-items: center;
     }
 
+    .close-icon {
+      align-self: flex-end;
+    }
+
     .login-container,
     .form-container {
+      inline-size: 100%;
+      block-size: 100vh;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
     }
 
@@ -176,7 +183,7 @@
 <body>
   <div class="login">
     <div class="login-container">
-      <img src="./icons/icon_close.png" alt="Icon for close action">
+      <img src="./icons/icon_close.png" alt="Icon for close action" class="close-icon">
       <section class="form-container">
         <img src="/logos/logo_yard_sale.svg" alt="Yard Sale logo" class="logo">
         <form action="/" class="form">
