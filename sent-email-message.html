@@ -47,6 +47,12 @@
       align-items: center;
     }
 
+    .email-icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .message-container {
       inline-size: 100%;
     }
@@ -78,6 +84,10 @@
 
     .title {
       margin-block-end: 9px;
+    }
+
+    .email-icon-container {
+      margin-block-start: 30px;
     }
 
     .primary-button {
@@ -126,6 +136,13 @@
     *
     */
 
+    .email-icon-container {
+      inline-size: 150px;
+      block-size: 150px;
+      background-color: var(--text-input-field);
+      border-radius: 50%;
+    }
+
     .primary-button {
       background-color: var(--hospital-green);
       cursor: pointer;
@@ -140,7 +157,9 @@
         <h1 class="title">Email has been sent!</h1>
         <p class="subtitle">Please check your inbox for instructions on how to reset the password</p>
 
-        <img src="/icons/email.svg" alt="Email icon">
+        <div class="email-icon-container">
+          <img src="/icons/email.svg" alt="Email icon" class="email-icon">
+        </div>
 
         <button class="primary-button">Login</button>
 
