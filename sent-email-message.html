@@ -97,6 +97,14 @@
       margin-block-start: 35px;
     }
 
+    .resend-pass {
+      margin-block: 30px 0;
+    }
+
+    .resend-pass a {
+      font-weight: 500;
+    }
+
     @media (min-width: 768px) {
       .logo {
         display: none;
@@ -131,6 +139,10 @@
       color: var(--white);
     }
 
+    .resend-pass {
+      font-size: var(--sm);
+    }
+
     /*
     *
     * Visuals
@@ -150,6 +162,11 @@
       cursor: pointer;
       border-radius: 10px;
     }
+
+    .resend-pass a {
+      text-decoration: none;
+      color: var(--hospital-green);
+    }
   </style>
 </head>
 <body>
@@ -166,7 +183,7 @@
 
         <button class="primary-button">Login</button>
 
-        <p>Didn't receive the email? <a href="/">Resend</a></p>
+        <p class="resend-pass">Didn't receive the email? <a href="/">Resend</a></p>
       </section>
     </div>
   </div>
