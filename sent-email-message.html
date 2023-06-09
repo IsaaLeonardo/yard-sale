@@ -40,20 +40,15 @@
       align-items: center;
     }
 
-    .message-container,
-    .form-container {
+    .login-container,
+    .message-container {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    .form-container form {
+    .message-container {
       inline-size: 100%;
-    }
-
-    .form-input {
-      display: flex;
-      flex-direction: column;
     }
 
     /*
@@ -62,7 +57,7 @@
     *
     */
 
-    .message-container {
+    .login-container {
       max-inline-size: 340px;
       padding-inline: 18px;
     }
@@ -71,7 +66,7 @@
       inline-size: 150px;
     }
 
-    .form-container {
+    .message-container {
       inline-size: 100%;
       margin-block-start: 74px;
     }
@@ -85,24 +80,7 @@
       margin-block-end: 9px;
     }
 
-    .form {
-      margin-block-start: 42px;
-    }
-
-    .form-input .label {
-      margin-block-end: 6px;
-    }
-
-    .form-input:first-child {
-      margin-block-end: 24px;
-    }
-
-    .form-input input {
-      padding-inline: 8px;
-      padding-block: 10px 12px;
-    }
-
-    .form-input .primary-button {
+    .primary-button {
       block-size: 60px;
       padding-block: 18px;
       margin-block-start: 35px;
@@ -113,7 +91,7 @@
         display: none;
       }
 
-      .form-container {
+      .message-container {
         margin-block-start: 0;
       }
     }
@@ -135,16 +113,7 @@
       text-align: center;
     }
 
-    .label {
-      font-size: var(--sm);
-      font-weight: 700;
-    }
-
-    .form-input input {
-      line-height: 20px;
-    }
-
-    .form-input .primary-button {
+    .primary-button {
       font-family: 'Quicksand', sans-serif;
       font-size: var(--lg);
       font-weight: 700;
@@ -157,17 +126,7 @@
     *
     */
 
-    .form-input input {
-      background-color: var(--text-input-field);
-      border: 0;
-      border-radius: 10px;
-    }
-
-    .form-input input:focus {
-      outline: none;
-    }
-
-    .form-input .primary-button {
+    .primary-button {
       background-color: var(--hospital-green);
       cursor: pointer;
     }
@@ -175,9 +134,9 @@
 </head>
 <body>
   <div class="login">
-    <div class="message-container">
+    <div class="login-container">
       <img src="/logos/logo_yard_sale.svg" alt="Yard Sale logo" class="logo">
-      <section class="form-container">
+      <section class="message-container">
         <h1 class="title">Email has been sent!</h1>
         <p class="subtitle">Please check your inbox for instructions on how to reset the password</p>
 
