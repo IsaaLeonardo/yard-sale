@@ -76,6 +76,7 @@
     */
 
     .login-container {
+      inline-size: 100%;
       max-inline-size: 340px;
       padding-inline: 18px;
     }
@@ -86,7 +87,7 @@
 
     .form-container {
       inline-size: 100%;
-      min-inline-size: 340px;
+      max-inline-size: 340px;
       margin-block-start: 34px;
     }
 
@@ -120,12 +121,16 @@
     }
 
     @media (min-width: 768px) {
-      .logo {
-        display: none;
+      .form-container {
+        justify-content: center;
       }
 
-      .form-container {
-        margin-block-start: 0;
+      .form-container form {
+        flex-grow: unset;
+      }
+
+      .primary-button {
+        margin-block-start: 35px;
       }
     }
 
