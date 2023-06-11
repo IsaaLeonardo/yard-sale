@@ -37,7 +37,6 @@
       block-size: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;
     }
 
     .login-container,
@@ -45,6 +44,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+
+    .title {
+      align-self: flex-start;
     }
 
     .form-container form {
@@ -73,7 +76,8 @@
 
     .form-container {
       inline-size: 100%;
-      margin-block-start: 74px;
+      min-inline-size: 340px;
+      margin-block-start: 34px;
     }
 
     .title,
@@ -86,7 +90,7 @@
     }
 
     .form {
-      margin-block-start: 42px;
+      margin-block-start: 47px;
     }
 
     .form-input .label {
