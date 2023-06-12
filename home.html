@@ -33,16 +33,18 @@
     }
     
     .product-card-container {
+      --card-inline-size: 170px;
+
       display: flex;
         flex-direction: column;
         gap: 8px;
 
       inline-size: 100%;
-        max-inline-size: 170px;
+        max-inline-size: var(--card-inline-size);
     }
 
     .product-image {
-      block-size: 170px;
+      block-size: var(--card-inline-size);
 
       border-radius: 20px;
         object-fit: cover;
