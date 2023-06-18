@@ -31,14 +31,48 @@
     * Positioning
     *
     */
-    
+    .menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .nav-options {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .close-icon {
+      align-self: flex-end;
+    }
 
     /*
     *
     * Box Model
     *
     */
+    .menu {
+      inline-size: 100%;
+      block-size: 100vh;
+    }
 
+    .menu-container {
+      block-size: 100vh;
+      padding-inline: 20px;
+    }
+
+    .categories-options,
+    .account-options {
+      inline-size: 100%;
+    }
 
     /*
     *
@@ -51,6 +85,10 @@
     * Visuals
     *
     */
+    ul  {
+      list-style: none;
+      padding: 0;
+    }
 
     .close-icon {
       cursor: pointer;
