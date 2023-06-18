@@ -38,24 +38,64 @@
       color: unset;
       text-decoration: none;
     }
+
+    button {
+      background-color: unset;
+      padding: 0;
+      border: 0;
+    }
+
+    .menu-container {
+      display: flex;
+      flex-direction: column;
+
+      box-sizing: border-box;
+      inline-size: 153px;
+      padding-inline: 25px;
+      
+      border-radius: 5px;
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.119789);
+    }
+
+    .line {
+      inline-size: 100%;
+
+      outline: 1px var(--very-light-pink) solid;
+    }
+
+    ul li {
+      margin-block: 30px;
+
+      font-size: var(--md);
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .signout-button {
+      margin-block: 20px;
+
+      font-size: var(--sm);
+      font-weight: 700;
+      color: var(--hospital-green);
+      text-align: right;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-  <div class="menu">
-    <div class="menu-container">
-      <ul class="account-options">
-        <li>
-          <a href="">My orders</a>
-        </li>
-        <li>
-          <a href="">My account</a>
-        </li>
-      </ul>
+  <div class="menu-container">
+    <ul class="account-options">
+      <li>
+        <a href="">My orders</a>
+      </li>
+      <li>
+        <a href="">My account</a>
+      </li>
+    </ul>
 
-      <div class="line"></div>
+    <div class="line"></div>
 
-      <button class="signout-button">Sign out</button>
-    </div>
+    <button class="signout-button">Sign out</button>
   </div>
 </body>
 </html>
