@@ -31,6 +31,42 @@
       list-style: none;
       padding: 0;
     }
+
+    .my-order {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      inline-size: 100%;
+    }
+
+    .my-order-container {
+      inline-size: 100%;
+      max-inline-size: 400px;
+    }
+
+    .main-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .article {
+      display: flex;
+      justify-content: space-between;
+      
+      margin-block-end: 24px;
+    }
+
+    .article-info {
+      display: flex;
+      gap: 17px;
+    }
+
+    .article-image {
+      inline-size: 76px;
+    }
   </style>
 </head>
 <body>
@@ -47,32 +83,42 @@
       
       <ul class="articles-list">
         <li class="article">
-          <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
-          <p class="article-name">A Bike</p>
+          <div class="article-info">
+            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
+            <p class="article-name">A Bike</p>
+          </div>
           <p class="article-mount">$ 120,00</p>
         </li>
 
         <li class="article">
-          <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
-          <p class="article-name">A Bike</p>
+          <div class="article-info">
+            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
+            <p class="article-name">A Bike</p>
+          </div>
           <p class="article-mount">$ 120,00</p>
         </li>
 
         <li class="article">
-          <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
-          <p class="article-name">A Bike</p>
+          <div class="article-info">
+            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
+            <p class="article-name">A Bike</p>
+          </div>
           <p class="article-mount">$ 120,00</p>
         </li>
 
         <li class="article">
-          <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
-          <p class="article-name">A Bike</p>
+          <div class="article-info">
+            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
+            <p class="article-name">A Bike</p>
+          </div>
           <p class="article-mount">$ 120,00</p>
         </li>
 
         <li class="article">
-          <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
-          <p class="article-name">A Bike</p>
+          <div class="article-info">
+            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
+            <p class="article-name">A Bike</p>
+          </div>
           <p class="article-mount">$ 120,00</p>
         </li>
       </ul>
