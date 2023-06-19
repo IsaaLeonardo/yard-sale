@@ -49,6 +49,14 @@
       padding-block: 17px;
     }
 
+    .title {
+      display: none;
+
+      margin-block: 0 47px;
+
+      font-size: var(--lg);
+    }
+
     .main-info {
       display: flex;
       justify-content: space-between;
@@ -110,11 +118,22 @@
       font-size: var(--md);
       font-weight: 700;
     }
+
+    @media (min-width: 426px) {
+      .title {
+        display: block;
+      }
+
+      .my-order {
+        block-size: 100vh;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="my-order">
     <div class="my-order-container">
+      <h1 class="title">My order</h1>
       <section class="main-info">
         <div class="date-articles-info">
           <p class="date">04.25.2021</p>
