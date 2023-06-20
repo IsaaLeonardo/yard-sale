@@ -69,6 +69,7 @@
         .navbar-left,
         .navbar-right {
           display: flex;
+          align-items: center;
           gap: 15px;
         }
 
@@ -79,7 +80,21 @@
         .navbar-options {
           display: flex;
           align-items: center;
-          gap: 10px;
+        }
+
+        .navbar-option {
+          padding-inline: 14px;
+          padding-block: 5px;
+
+          color: var(--very-light-pink);
+          font-weight: 500;
+          font-size: var(--md);
+        }
+
+        .navbar-option.selected {
+          color: var(--hospital-green);
+          border: 1px var(--hospital-green) solid;
+          border-radius: 10px;
         }
 
         .my-account {
@@ -106,7 +121,7 @@
         <img src="/logos/logo_yard_sale.svg" alt="Yard Sale logo" class="logo">
 
         <ul class="navbar-options">
-          <li class="navbar-option">
+          <li class="navbar-option selected">
             <a href="#">All</a>
           </li>
           <li class="navbar-option">
