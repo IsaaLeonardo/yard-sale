@@ -25,6 +25,7 @@
 
       ul {
         padding: 0;
+        margin: 0;
       }
 
       li {
@@ -50,43 +51,86 @@
         padding-inline: 15px;
         padding-block: 10px;
       }
+
+      @media (min-width: 768px) {
+        .hamburguer-menu {
+          display: none;
+        }
+
+        .navbar-container {
+          block-size: 54px;
+        }
+
+        .navbar-left,
+        .navbar-right {
+          display: flex;
+          gap: 15px;
+        }
+
+        .logo {
+          block-size: 30px;
+        }
+
+        .navbar-options {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .my-account {
+          display: flex;
+          align-items: center;
+          gap: 7.5px;
+        }
+
+        .my-account p {
+          margin: 0;
+        }
+
+        .my-account .arrow-icon {
+          rotate: 90deg;
+        }
+      }
   </style>
 </head>
 <body>
   <nav class="navbar">
     <div class="navbar-container">
       <img src="/icons/icon_menu.svg" alt="Hamburguer Menu" class="hamburguer-menu">
+      <div class="navbar-left">
+        <img src="/logos/logo_yard_sale.svg" alt="Yard Sale logo" class="logo">
 
-      <img src="/logos/logo_yard_sale.svg" alt="Yard Sale logo" class="logo">
-
-      <ul class="navbar-options">
-        <li class="navbar-option">
-          All
-        </li>
-        <li class="navbar-option">
-          Clothes
-        </li>
-        <li class="navbar-option">
-          Electronics
-        </li>
-        <li class="navbar-option">
-          Furniture
-        </li>
-        <li class="navbar-option">
-          Toys
-        </li>
-        <li class="navbar-option">
-          Others
-        </li>
-      </ul>
-
-      <div class="my-account">
-        <p class="email">camilayokoo@gmail.com</p>
-        <img src="/icons/flechita.svg" alt="Arrow icon">
+        <ul class="navbar-options">
+          <li class="navbar-option">
+            All
+          </li>
+          <li class="navbar-option">
+            Clothes
+          </li>
+          <li class="navbar-option">
+            Electronics
+          </li>
+          <li class="navbar-option">
+            Furniture
+          </li>
+          <li class="navbar-option">
+            Toys
+          </li>
+          <li class="navbar-option">
+            Others
+          </li>
+        </ul>
       </div>
 
-      <!-- <img src="./icons/icon_shopping_cart.svg" alt="" class="my-order"> -->
-      <img src="./icons/icon_shopping_cart_notification.svg" alt="">
+      <div class="navbar-right">
+        <div class="my-account">
+          <p class="email">camilayokoo@gmail.com</p>
+          <img src="/icons/flechita.svg" class="arrow-icon" alt="Arrow icon">
+        </div>
+  
+        <!-- <img src="./icons/icon_shopping_cart.svg" alt="" class="my-order"> -->
+        <img src="./icons/icon_shopping_cart_notification.svg" alt="">
+      </div>
     </div>
   </nav>
 </body>
