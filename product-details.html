@@ -37,6 +37,8 @@
     .product-container {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      gap: 22px;
       
       inline-size: 384px;
       block-size: 100vh;
@@ -88,7 +90,7 @@
 
     .product-info {
       margin-block-start: 25px;
-      padding-inline: 16px;
+      padding-inline: 18px;
     }
 
     .price {
@@ -106,33 +108,52 @@
     .product-description {
       font-size: var(--md);
     }
+
+    .add-product-cta {
+      margin-inline: 18px;
+      margin-block-end: 22px;
+      padding-block: 12px;
+      border-radius: 10px;
+      background-color: var(--hospital-green);
+    }
+
+    .add-product-cta p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9.5px;
+      font-size: var(--lg);
+      color: var(--white);
+    }
   </style>
 </head>
 <body>
   <div class="product-container">
-    <div class="product-images">
-      <button class="close-button">
-        <img src="./icons/icon_close.png" alt="Close Icon">
-      </button>
-      <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="product-image">
-      <div class="image-indicators">
-        <div class="image-indicator selected"></div>
-        <div class="image-indicator"></div>
-        <div class="image-indicator"></div>
+    <div class="product-info-start">
+      <div class="product-images">
+        <button class="close-button">
+          <img src="./icons/icon_close.png" alt="Close Icon">
+        </button>
+        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="product-image">
+        <div class="image-indicators">
+          <div class="image-indicator selected"></div>
+          <div class="image-indicator"></div>
+          <div class="image-indicator"></div>
+        </div>
+      </div>
+  
+      <div class="product-info">
+        <p class="price">$ 120,00</p>
+        <p class="name">A Bike</p>
+  
+        <p class="product-description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ut tempora illo necessitatibus quo culpa? Beatae aspernatur molestiae, nesciunt esse consequatur voluptatum voluptates aut, cum ea error vel, minus commodi?
+        </p>
       </div>
     </div>
 
-    <div class="product-info">
-      <p class="price">$ 120,00</p>
-      <p class="name">A Bike</p>
-
-      <p class="product-description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ut tempora illo necessitatibus quo culpa? Beatae aspernatur molestiae, nesciunt esse consequatur voluptatum voluptates aut, cum ea error vel, minus commodi?
-      </p>
-    </div>
-
     <button class="add-product-cta">
-      <p><img src="./icons/icon_shopping_cart.svg" alt="Shopping Cart icon"> Add to cart</p>
+      <p><img src="./icons/bt_add_to_cart.svg" alt="Shopping Cart icon"> Add to cart</p>
     </button>
   </div>
 </body>
