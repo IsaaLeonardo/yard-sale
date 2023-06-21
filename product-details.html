@@ -29,6 +29,11 @@
       cursor: pointer;
     }
 
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
     .product-container {
       display: flex;
       flex-direction: column;
@@ -79,6 +84,27 @@
 
     .image-indicator.selected {
       opacity: unset;
+    }
+
+    .product-info {
+      margin-block-start: 25px;
+      padding-inline: 16px;
+    }
+
+    .price {
+      font-size: var(--lg);
+      font-weight: 700;
+      margin-block-end: 5px;
+    }
+
+    .name {
+      font-size: var(--lg);
+      font-weight: 400;
+      margin-block-end: 20px;
+    }
+
+    .product-description {
+      font-size: var(--md);
     }
   </style>
 </head>
