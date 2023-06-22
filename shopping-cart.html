@@ -32,6 +32,12 @@
       padding: 0;
     }
 
+    button {
+      background-color: unset;
+      padding: 0;
+      border: unset;
+    }
+
     .my-order {
       display: flex;
       justify-content: center;
@@ -42,45 +48,19 @@
     }
 
     .my-order-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
       box-sizing: border-box;
       inline-size: 100%;
       max-inline-size: 400px;
+      min-block-size: 100vh;
       padding-inline: 15px;
-      padding-block: 17px;
     }
 
     .title {
       display: none;
-
-      margin-block: 0 47px;
-
-      font-size: var(--lg);
-    }
-
-    .main-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      padding-inline: 18px 13px;
-      padding-block: 16px;
-
-      background-color: var(--text-input-field);
-      border-radius: 10px;
-    }
-
-    .main-info p {
-      margin-block: 3.5px;
-    }
-
-    .main-info .date,
-    .main-info .total-mount {
-      font-size: var(--md);
-      font-weight: 700;
-    }
-
-    .main-info .total-articles {
-      font-size: var(--sm);
     }
 
     .article {
@@ -95,7 +75,8 @@
       margin: 0;
     }
 
-    .article-info {
+    .article-left,
+    .article-right {
       display: flex;
       align-items: center;
       gap: 17px;
@@ -119,27 +100,84 @@
       font-weight: 700;
     }
 
-    @media (min-width: 426px) {
-      .title {
-        display: block;
+    .bottom-shopping-cart {
+      position: sticky;
+      bottom: 0;
+
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+
+      padding-block: 15px;
+
+      background-color: var(--white);
+    }
+
+    .total-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding-inline: 18px 13px;
+      padding-block: 30px;
+
+      background-color: var(--text-input-field);
+      border-radius: 10px;
+    }
+
+    .total-info p {
+      margin-block: 3.5px;
+      font-size: var(--md);
+      font-weight: 700;
+    }
+
+    .checkout-cta {
+      background-color: var(--hospital-green);
+      padding-block: 18px;
+      border-radius: 10px;
+      color: var(--white);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .my-order-container {
+        min-block-size: calc(100vh - 70px);
       }
 
-      .my-order {
-        block-size: 100vh;
+      .title {
+        position: sticky;
+        top: 0;
+
+        display: flex;
+        gap: 24px;
+
+        box-sizing: border-box;
+        inline-size: 100%;
+        max-inline-size: 400px;
+        padding-inline: 15px;
+        padding-block-start: 17px;
+
+        background-color: var(--white);
+      }
+
+      .title h2 {
+        font-size: var(--lg);
+        font-weight: 700;
       }
     }
   </style>
 </head>
 <body>
   <div class="my-order">
+    <div class="title">
+      <img src="./icons/flechita.svg" alt="Arrow icon">
+      <h2>Shopping Cart</h2>
+    </div>
     <div class="my-order-container">
-      <div class="title">
-        <img src="./icons/flechita.svg" alt="Arrow icon">
-        <h2>Shopping Cart</h2>
-      </div>
       <ul class="articles-list">
         <li class="article">
-          <div class="article-info">
+          <div class="article-left">
             <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
             <p class="article-name">A Bike</p>
           </div>
@@ -150,7 +188,7 @@
         </li>
 
         <li class="article">
-          <div class="article-info">
+          <div class="article-left">
             <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
             <p class="article-name">A Bike</p>
           </div>
@@ -161,7 +199,7 @@
         </li>
 
         <li class="article">
-          <div class="article-info">
+          <div class="article-left">
             <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
             <p class="article-name">A Bike</p>
           </div>
@@ -172,7 +210,7 @@
         </li>
 
         <li class="article">
-          <div class="article-info">
+          <div class="article-left">
             <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
             <p class="article-name">A Bike</p>
           </div>
@@ -183,7 +221,7 @@
         </li>
 
         <li class="article">
-          <div class="article-info">
+          <div class="article-left">
             <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="A bike picture" class="article-image">
             <p class="article-name">A Bike</p>
           </div>
@@ -195,12 +233,12 @@
       </ul>
 
       <div class="bottom-shopping-cart">
-        <section class="main-info">
+        <section class="total-info">
           <p>Total</p>
           <p class="total-mount">$ 560,00</p>
         </section>
 
-        <button>Checkout</button>
+        <button class="checkout-cta">Checkout</button>
       </div>
     </div>
   </div>
