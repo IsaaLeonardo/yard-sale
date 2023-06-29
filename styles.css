@@ -1,0 +1,107 @@
+:root {
+  --very-light-pink: #C7C7C7;
+  --text-input-field: #F7F7F7;
+  --hospital-green: #ACD9B2;
+  --white: #FFF;
+  --black: #000;
+  --dark: #232830;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.navbar-options,
+.my-account {
+  display: none;
+}
+
+.navbar {
+  inline-size: 100%;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  block-size: 46px;
+  padding-inline: 15px;
+  padding-block: 10px;
+}
+
+@media (min-width: 768px) {
+  .hamburguer-menu {
+    display: none;
+  }
+
+  .navbar-container {
+    block-size: 54px;
+  }
+
+  .navbar-left,
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo {
+    block-size: 30px;
+  }
+
+  .navbar-options {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .navbar-option {
+    padding-inline: 14px;
+    padding-block: 5px;
+
+    color: var(--very-light-pink);
+    font-weight: 500;
+    font-size: var(--md);
+  }
+
+  .navbar-option.selected,
+  .navbar-option:hover {
+    color: var(--hospital-green);
+    border: 1px var(--hospital-green) solid;
+    border-radius: 10px;
+  }
+
+  .my-account {
+    display: flex;
+    align-items: center;
+    gap: 7.5px;
+  }
+
+  .my-account p {
+    margin: 0;
+  }
+
+  .my-account .arrow-icon {
+    rotate: 90deg;
+  }
+}
