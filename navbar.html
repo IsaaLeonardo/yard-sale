@@ -80,6 +80,7 @@
         .navbar-options {
           display: flex;
           align-items: center;
+          gap: 5px;
         }
 
         .navbar-option {
@@ -91,7 +92,8 @@
           font-size: var(--md);
         }
 
-        .navbar-option.selected {
+        .navbar-option.selected,
+        .navbar-option:hover {
           color: var(--hospital-green);
           border: 1px var(--hospital-green) solid;
           border-radius: 10px;
