@@ -44,6 +44,8 @@ button {
   border: 0;
 }
 
+/* NAVBAR */
+
 .navbar-options,
 .my-account {
   display: none;
@@ -63,6 +65,8 @@ button {
   padding-block: 10px;
 }
 
+/* DESKTOP MENU */
+
 .menu-container {
   display: flex;
   flex-direction: column;
@@ -80,10 +84,6 @@ button {
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.119789);
 }
 
-.inactive {
-  display: none;
-}
-
 .line {
   inline-size: 100%;
 
@@ -98,6 +98,88 @@ button {
   color: var(--hospital-green);
   text-align: right;
   cursor: pointer;
+}
+
+/* MOBILE MENU */
+
+.menu-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+
+  inline-size: 100%;
+  block-size: 100vh;
+
+  background-color: var(--white);
+}
+
+.menu-mobile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  inline-size: 100%;
+  max-inline-size: 375px;
+  block-size: 100vh;
+  padding-inline: 20px;
+  padding-block: 20px 56px;
+}
+
+.nav-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.close-icon {
+  align-self: flex-end;
+
+  cursor: pointer;
+}
+
+.categories-options,
+.account-options {
+  inline-size: 100%;
+}
+
+.categories-options h1 {
+  margin-block: 6px 39px;
+
+  font-size: var(--md);
+  font-weight: 700;
+}
+
+.categories-options li,
+.account-options li {
+  margin-block: 37px;
+
+  font-size: var(--md);
+  font-weight: 700;
+}
+
+.line {
+  inline-size: 100%;
+  outline: 1px var(--very-light-pink) solid;
+}
+
+.email {
+  font-size: var(--sm);
+}
+
+.login-info .signout-button {
+  font-size: var(--sm);
+  color: var(--hospital-green);
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.inactive {
+  display: none;
 }
 
 @media (min-width: 768px) {
