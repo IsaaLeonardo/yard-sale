@@ -178,12 +178,117 @@ button {
   cursor: pointer;
 }
 
+/* SHOPPING CART */
+
+.my-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  float: right;
+
+  inline-size: 100%;
+}
+
+.my-order-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  inline-size: 100%;
+  min-block-size: calc(100vh - 66px);
+  padding-inline: 15px;
+}
+
+.title {
+  display: none;
+}
+
+.article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  margin-block-end: 24px;
+}
+
+.article p {
+  margin: 0;
+}
+
+.article-left,
+.article-right {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.article-image {
+  inline-size: 76px;
+  block-size: 76px;
+
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.article-name {
+  font-size: var(--sm);
+  font-weight: 400;
+}
+
+.article-mount {
+  font-size: var(--md);
+  font-weight: 700;
+}
+
+.bottom-shopping-cart {
+  position: sticky;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  padding-block: 15px;
+
+  background-color: var(--white);
+}
+
+.total-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-inline: 18px 13px;
+  padding-block: 30px;
+
+  background-color: var(--text-input-field);
+  border-radius: 10px;
+}
+
+.total-info p {
+  margin-block: 3.5px;
+  font-size: var(--md);
+  font-weight: 700;
+}
+
+.checkout-cta {
+  background-color: var(--hospital-green);
+  padding-block: 18px;
+  border-radius: 10px;
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .inactive {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .hamburguer-menu {
+  .hamburguer-menu,
+  .menu-mobile {
     display: none;
   }
 
@@ -241,5 +346,34 @@ button {
 
   .my-account .arrow-icon {
     rotate: 90deg;
+  }
+
+  .my-order { 
+    max-inline-size: 400px;
+  }
+
+  .my-order-container {
+    min-block-size: calc(100vh - 70px - 74px);
+  }
+
+  .title {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    gap: 24px;
+
+    box-sizing: border-box;
+    inline-size: 100%;
+    max-inline-size: 400px;
+    padding-inline: 15px;
+    padding-block-start: 17px;
+
+    background-color: var(--white);
+  }
+
+  .title h2 {
+    font-size: var(--lg);
+    font-weight: 700;
   }
 }
