@@ -394,7 +394,16 @@ button {
   }
 
   .my-account p {
+    display: none;
+    
     margin: 0;
+  }
+
+  .user-icon {
+    display: block;
+
+    inline-size: 100%;
+    block-size: 20px;
   }
 
   .my-account .arrow-icon {
@@ -434,5 +443,15 @@ button {
 @media (max-width: 370px) {
   .product-card-container {
     max-inline-size: 280px;
+  }
+}
+
+@media (min-width: 935px) {
+  .user-icon {
+    display: none;
+  }
+
+  .my-account p {
+    display: block;
   }
 }
