@@ -373,6 +373,7 @@ button {
   .navbar-option {
     padding-inline: 14px;
     padding-block: 5px;
+    border: 1px solid var(--white);
 
     color: var(--very-light-pink);
     font-weight: 500;
