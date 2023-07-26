@@ -191,6 +191,7 @@ button {
   right: 0;
 
   inline-size: 100%;
+  max-block-size: calc(100vh - 66px);
 }
 
 .my-order-container {
@@ -206,6 +207,11 @@ button {
 
 .title {
   display: none;
+}
+
+.articles-list {
+  overflow: auto;
+  padding-inline: 10px;
 }
 
 .article {
@@ -293,7 +299,10 @@ button {
   justify-content: center;
   gap: 10px;
   
+  max-block-size: calc(100vh - 66px);
   padding-inline: 10px;
+
+  overflow: auto;
 }
 
 .product-card-container {
@@ -412,6 +421,7 @@ button {
 
   .my-order { 
     max-inline-size: 400px;
+    max-block-size: calc(100vh - 74px);
   }
 
   .my-order-container {
@@ -441,6 +451,10 @@ button {
   .title h2 {
     font-size: var(--lg);
     font-weight: 700;
+  }
+
+  .products-container {
+    max-block-size: calc(100vh - 74px);
   }
 }
 
