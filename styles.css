@@ -282,6 +282,7 @@ button {
   border-radius: 10px;
   color: var(--white);
   font-weight: 700;
+  font-size: var(--md);
   cursor: pointer;
 }
 
@@ -431,6 +432,10 @@ button {
     padding-block-start: 17px;
 
     background-color: var(--white);
+  }
+
+  .title .arrow-shoppin-cart-icon {
+    cursor: pointer;
   }
 
   .title h2 {
