@@ -8,6 +8,7 @@ const mobileMenu = $('.menu-mobile')
 const shoppingCartButton = $('.shopping-cart-icon')
 const arrowButton = $('.arrow-shoppin-cart-icon')
 const myOrderMenu = $('.my-order')
+const productCards = document.querySelectorAll('.product-card-container')
 
 // Toggle desktop menu when clicking account button
 accountButton.addEventListener('click', () => desktopMenu.classList.toggle('inactive'))
@@ -19,3 +20,8 @@ closeButton.addEventListener('click', () => mobileMenu.classList.add('inactive')
 // Toggle my order menu
 shoppingCartButton.addEventListener('click', () => myOrderMenu.classList.toggle('inactive'))
 arrowButton.addEventListener('click', () => myOrderMenu.classList.add('inactive'))
+
+// Open product menu
+for (const productCard of productCards) {
+  productCard.addEventListener('click', () => console.log('funciona'))
+}
