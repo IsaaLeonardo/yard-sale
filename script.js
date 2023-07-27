@@ -17,5 +17,5 @@ burguerButton.addEventListener('click', () => mobileMenu.classList.remove('inact
 closeButton.addEventListener('click', () => mobileMenu.classList.add('inactive'))
 
 // Toggle my order menu
-shoppingCartButton.addEventListener('click', () => myOrderMenu.classList.remove('inactive'))
+shoppingCartButton.addEventListener('click', () => myOrderMenu.classList.toggle('inactive'))
 arrowButton.addEventListener('click', () => myOrderMenu.classList.add('inactive'))
