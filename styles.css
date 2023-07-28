@@ -357,7 +357,7 @@ button {
   background-color: #fff;
   right: 0;
   
-  inline-size: 384px;
+  inline-size: 100%;
   block-size: 100vh;
   max-block-size: calc(100vh - 66px);
   background-color: var(--white);
@@ -557,8 +557,12 @@ button {
     font-weight: 700;
   }
 
-  .products-container,
+  .products-container {
+    max-block-size: calc(100vh - 74px);
+  }
+
   .product-container {
+    max-inline-size: 400px;
     max-block-size: calc(100vh - 74px);
   }
 }
