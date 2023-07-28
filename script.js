@@ -20,12 +20,18 @@ burguerButton.addEventListener('click', () => mobileMenu.classList.remove('inact
 closeButton.addEventListener('click', () => mobileMenu.classList.add('inactive'))
 
 // Toggle my order menu
-shoppingCartButton.addEventListener('click', () => myOrderMenu.classList.toggle('inactive'))
+shoppingCartButton.addEventListener('click', () => {
+  productMenu.classList.add('inactive')
+  myOrderMenu.classList.toggle('inactive')
+})
 arrowButton.addEventListener('click', () => myOrderMenu.classList.add('inactive'))
 
 // Open product menu
 for (const productCard of productCards) {
-  productCard.addEventListener('click', () => productMenu.classList.remove('inactive'))
+  productCard.addEventListener('click', () => {
+    myOrderMenu.classList.add('inactive')
+    productMenu.classList.remove('inactive')
+  })
 }
 
 // Close product menu
