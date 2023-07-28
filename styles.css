@@ -377,6 +377,8 @@ button {
   position: absolute;
   top: 17px;
   left: 12px;
+
+  cursor: pointer;
 }
 
 .product-image {
