@@ -453,6 +453,23 @@ button {
   display: none;
 }
 
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color:	hsl(128, 37%, 90%);
+  border-radius: 100vw;
+  margin-block: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(128, 37%, 76%);
+  border-radius: 100vw;
+  border: 3px solid hsl(128, 37%, 90%);
+}
+
 @media (min-width: 768px) {
   .hamburguer-menu,
   .menu-mobile {
